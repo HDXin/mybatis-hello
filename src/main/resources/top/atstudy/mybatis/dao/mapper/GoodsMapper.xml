@@ -11,7 +11,18 @@ resultType：返回值类型
 
 public Employee getEmpById(Integer id);
  -->
+
+	<insert id="create">
+		insert into goods(goods_id, store_id, tags, title) values(#{goodsId}, #{storeId}, #{tags}, #{title})
+	</insert>
+
+
 	<select id="getById" resultType="top.atstudy.mybatis.dao.dto.GoodsDTO">
 		select goods_id goodsId, store_id storeId, tags, title from goods where goods_id = #{goods_id}
+	</select>
+
+
+	<select id="find" resultType="top.atstudy.mybatis.dao.dto.GoodsDTO">
+		select goods_id, store_id, title, tags from goods
 	</select>
 </mapper>

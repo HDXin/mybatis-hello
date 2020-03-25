@@ -38,4 +38,14 @@ public class GoodsDTO {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    @Override
+    public String toString() {
+        return "GoodsDTO{" +
+                "goodsId=" + goodsId +
+                ", storeId=" + storeId +
+                ", tags='" + tags + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }
